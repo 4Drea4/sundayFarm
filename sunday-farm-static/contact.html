@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us — The Sunday Farm</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="contact-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER (same structure as before, just swaps text for image) -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <button class="logo" onclick="location.href='index.html'">
+        <img class="logo-img" src="images/logo2.png" alt="The Sunday Farm logo">
+      </button>
+      
+
+      <nav class="nav" aria-label="Main">
+        <button class="menu-toggle" aria-controls="nav-menu" aria-expanded="false" onclick="toggleMenu()">
+          <span class="menu-icon" aria-hidden="true">☰</span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a class="is-active" href="index.html">Home</a></li>
+          <li><a href="what-we-do.html">What We Do</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a class="btn btn-olive" href="select-your-farm.html">Get Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- Hero -->
+    <section class="page-hero gradient-emerald">
+      <div class="container text-center narrow">
+        <h1 class="h1 text-on-dark">Contact Us</h1>
+      
+      </div>
+    </section>
+
+    <!-- Emergency Banner -->
+   
+
+    <!-- Main content -->
+    <section class="section">
+      <div class="container">
+        <div class="grid halves gap-24">
+          <!-- Contact form -->
+          <div>
+            <h2 class="h2">Send Us a Message</h2>
+            <p class="muted" style="margin-top:8px;">Fill out the form below and we'll get back to you as soon as possible. For urgent matters, please call us directly.</p>
+
+            <!-- Success message (hidden by default) -->
+            <div id="form-success" class="card success" style="display:none; margin-top:18px;">
+              <div class="icon-hero success" aria-hidden="true"></div>
+              <h3 class="h4" style="color:#166534;">Message Sent Successfully!</h3>
+              <p class="muted" style="color:#166534;">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+            </div>
+
+            <form id="contact-form" class="form card" aria-label="Contact form" style="margin-top:18px;">
+              <div class="field">
+                <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" required placeholder="John Doe" />
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" required placeholder="john@example.com" />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" />
+              </div>
+
+              <div class="field">
+                <label for="role">I am a... <span aria-hidden="true">*</span></label>
+                <select id="role" name="role" required aria-label="Select your role">
+                  <option value="" selected disabled>Select your role</option>
+                  <option value="caregiver">Parent/Caregiver</option>
+                  <option value="professional">Social Worker/Professional</option>
+                  <option value="volunteer">Potential Volunteer</option>
+                  <option value="donor">Potential Donor/Partner</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="subject">Subject <span aria-hidden="true">*</span></label>
+                <input id="subject" name="subject" type="text" required placeholder="How can we help you?" />
+              </div>
+
+              <div class="field">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" rows="6" required placeholder="Tell us more about your inquiry..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-emerald-lg" aria-label="Submit contact form">Send Message</button>
+              <p class="tiny muted center" style="margin-top:10px;">* Required fields</p>
+            </form>
+          </div>
+
+          <!-- Contact info cards -->
+          <div>
+            <h2 class="h2">Get in Touch</h2>
+            <p class="muted" style="margin-top:8px;">We're here to answer your questions and connect you with the help you need.</p>
+
+            <div class="stack gap-16" style="margin-top:18px;">
+              <!-- Address -->
+              <article class="card">
+                <div class="media icon-left">
+                  <div class="icon-pill emerald" aria-hidden="true">
+                    <!-- MapPin -->
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4.5 8-11a8 8 0 1 0-16 0c0 6.5 8 11 8 11z"></path>
+                      <circle cx="12" cy="11" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="h4">Address</h3>
+                    <address class="muted not-italic">
+                      The Sunday Farm<br />
+                      123 Healing Way<br />
+                      Hope Valley, CA 95000
+                    </address>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Phone -->
+              <article class="card">
+                <div class="media icon-left">
+                  <div class="icon-pill olive" aria-hidden="true">
+                    <!-- Phone -->
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.1 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.47-1.2a2 2 0 0 1 2.11-.45c.84.29 1.71.5 2.61.62A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="h4">Phone</h3>
+                    <p class="muted">
+                      <strong>Main Office:</strong><br />
+                      <a href="tel:+15551234567" class="link-emerald">(555) 123-4567</a>
+                    </p>
+                   
+                  </div>
+                </div>
+              </article>
+
+              <!-- Email -->
+              <article class="card">
+                <div class="media icon-left">
+                  <div class="icon-pill emerald" aria-hidden="true">
+                    <!-- Mail -->
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16v16H4z"></path>
+                      <path d="m22 6-10 7L2 6"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="h4">Email</h3>
+                    <p class="muted">
+                      <strong>General Inquiries:</strong><br />
+                      <a href="mailto:info@sundayfarm.org" class="link-emerald break-all">info@sundayfarm.org</a>
+                    </p>
+                    <p class="muted" style="margin-top:8px;">
+                      <strong>Foster Care:</strong><br />
+                      <a href="mailto:fostercare@sundayfarm.org" class="link-emerald break-all">fostercare@sundayfarm.org</a>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Hours -->
+              <article class="card">
+                <div class="media icon-left">
+                  <div class="icon-pill olive" aria-hidden="true">
+                    <!-- Clock -->
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M12 6v6l4 2"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="h4">Office Hours</h3>
+                    <p class="muted"><strong>Monday – Friday:</strong> 8:00 AM – 6:00 PM</p>
+                    <p class="muted"><strong>Saturday:</strong> 9:00 AM – 2:00 PM</p>
+                    <p class="muted"><strong>Sunday:</strong> Closed</p>
+                    <p class="tiny muted italic" style="margin-top:6px;">*Crisis support available 24/7</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div> <!-- /right column -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Map placeholder -->
+    <section class="section section-soft">
+      <div class="container">
+        <h2 class="h2 center">Find Us</h2>
+        <div class="map-placeholder">
+          <div class="center muted">
+            <!-- MapPin -->
+            <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom:10px;">
+              <path d="M24 46s16-9 16-22a16 16 0 1 0-32 0c0 13 16 22 16 22z"></path>
+              <circle cx="24" cy="24" r="6"></circle>
+            </svg>
+            <p class="lead-soft">Interactive map coming soon</p>
+            <p class="tiny">123 Healing Way, Hope Valley, CA 95000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faith foundation -->
+    <section class="section">
+      <div class="container narrow">
+        <article class="card soft-gradient">
+          <h3 class="h3 center">Our Faith Foundation</h3>
+          <p class="muted center" style="margin-top:8px;">
+            The Sunday Farm is a Christ-centered ministry that believes in the transforming power of God's love. 
+            We serve all children and families with respect and dignity, regardless of their faith background.
+          </p>
+          <p class="center italic" style="color:#4b5563; margin-top:10px;">
+            “For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, 
+            to give you a future and a hope.” — Jeremiah 29:11
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+<!-- Footer (same as index) -->
+<footer class="site-footer" role="contentinfo">
+ 
+
+  <div class="footer-main">
+    <div class="container footer-grid">
+      <div>
+        <h4 class="h4">The Sunday Farm</h4>
+        <p class="muted">Healed Children, Heal the World.</p>
+      </div>
+      
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="what-we-do.html">What We Do</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </nav>
+      <div class="contact">
+        <p><a href="tel:+15551234567">(555) 123-4567</a><br><a href="mailto:info@sundayfarm.org">info@sundayfarm.org</a></p>
+        <address>123 Healing Way<br>Hope Valley, CA 95000</address>
+      </div>
+    </div>
+    <div class="container tiny">
+      &copy; <span id="year"></span> The Sunday Farm. 501(c)(3).  
+      <span class="partner-line">Official Partner: 
+        <a href="https://hisflock.org" target="_blank" rel="noopener">HisFlock.org</a>
+      </span>
+    </div>
+</footer>
+
+  
+  <!-- Minimal form handler -->
+  <script>
+    (function () {
+      const form = document.getElementById('contact-form');
+      const success = document.getElementById('form-success');
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          // Normally you'd POST to your backend here
+          success.style.display = 'block';
+          form.reset();
+          setTimeout(() => { success.style.display = 'none'; }, 5000);
+        });
+      }
+    }());
+  </script>
+ 
+
+  <script src="script.js" defer></script>
+</body>
+</html>

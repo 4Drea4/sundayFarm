@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Sunday Farm</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER (same structure as before, just swaps text for image) -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <button class="logo" onclick="location.href='index.html'">
+        <img class="logo-img" src="images/logo2.png" alt="The Sunday Farm logo">
+      </button>
+      
+
+      <nav class="nav" aria-label="Main">
+        <button class="menu-toggle" aria-controls="nav-menu" aria-expanded="false" onclick="toggleMenu()">
+          <span class="menu-icon" aria-hidden="true">☰</span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a class="is-active" href="index.html">Home</a></li>
+          <li><a href="what-we-do.html">What We Do</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a class="btn btn-olive" href="select-your-farm.html">Get Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- FULL-BLEED COVER HERO -->
+    <section
+      class="hero hero-cover"
+      style="background-image:url('images/hero.png');"
+      aria-labelledby="hero-heading"
+    >
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-inner container">
+        <h1 id="hero-heading" class="h1 mb-12">The Sunday Farm</h1>
+        <p class="tagline" style="color:#e7f3ea;">Healed Children, Heal the World.</p>
+        <p class="lead center" style="color:#f4f6f5; max-width: 60ch;">
+          Christ-centered care for children who have experienced trauma — and support for the
+          parents and caregivers who love them.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn" href="select-your-farm.html" aria-label="Find a home for a child">
+            Find a Home for a Child
+          </a>
+          <a class="btn btn-olive" href="select-your-farm.html" aria-label="Get support for caregivers">
+            Get Support
+          </a>
+        </div>
+
+        <p class="mt-24">
+          <a class="link-invert" href="what-we-do.html">Learn what we do</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO TEASER -->
+    <section id="what-we-do" class="section">
+      <div class="container">
+        <h2 class="h2">What We Do</h2>
+        <div class="card-grid thirds">
+          <article class="card">
+            <h3 class="h4">Residential Care for Abused Children</h3>
+            <p>Emergency, short-term, and long-term family-style housing for children who have experienced trauma.</p>
+            <a class="btn-link" href="what-we-do.html#services">Learn more →</a>
+          </article>
+          <article class="card">
+            <h3 class="h4">Parent &amp; Caregiver Support</h3>
+            <p>Respite care, emotional support, Christ-centered community, and practical resources.</p>
+            <a class="btn-link" href="what-we-do.html#live-this-out">Learn more →</a>
+          </article>
+          <article class="card">
+            <h3 class="h4">Community Engagement &amp; Education</h3>
+            <p>Child-led worship nights and creative expression that bring healing to the world around them.</p>
+            <a class="btn-link" href="what-we-do.html#live-this-out">Learn more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDING VISION TEASER -->
+    <section class="section soft">
+      <div class="container split">
+        <div>
+          <h2 class="h2">Why “The Sunday Farm”?</h2>
+          <p>“Sunday” is a fresh start — rest, worship, Jesus. “Farm” is growth, cultivation, deep and real love where healing takes root.</p>
+          <a class="btn btn-olive" href="our-story.html">Our Story</a>
+        </div>
+       <img src="images/kidsrunning.png" class="second-image" id="kids-runnging" alt="kids running">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <section class="cta-band">
+      <div class="container split">
+        <div>
+          <h3 class="h3">Ready to Make a Difference?</h3>
+          <p>Whether you need support or want to help, we’re here for you.</p>
+          <a class="btn btn-light" href="contact.html">Contact Us</a>
+        </div>
+        <div class="text-right">
+          <h3 class="h3">Plant a Seed of Hope &amp; Healing</h3>
+          <p>Your gift transforms lives and brings healing to children in need.</p>
+          <a class="btn btn-olive" href="get-involved.html">Donate Today</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div>
+          <h4 class="h4">The Sunday Farm</h4>
+          <p class="muted">Healed Children, Heal the World.</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="what-we-do.html">What We Do</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </nav>
+
+        <div class="contact">
+          <p>
+            <a href="tel:+15551234567">(555) 123-4567</a><br>
+            <a href="mailto:info@sundayfarm.org">info@sundayfarm.org</a>
+          </p>
+          <address>123 Healing Way<br>Hope Valley, CA 95000</address>
+        </div>
+      </div>
+     
+      <div class="container tiny">
+        &copy; <span id="year"></span> The Sunday Farm. 501(c)(3).  
+        <span class="partner-line">Official Partner: 
+          <a href="https://hisflock.org" target="_blank" rel="noopener">HisFlock.org</a>
+        </span>
+      </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

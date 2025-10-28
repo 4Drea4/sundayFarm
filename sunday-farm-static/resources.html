@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resources & Support — The Sunday Farm</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="resources-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+   <!-- HEADER (same structure as before, just swaps text for image) -->
+   <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <button class="logo" onclick="location.href='index.html'">
+        <img class="logo-img" src="images/logo2.png" alt="The Sunday Farm logo">
+      </button>
+      
+
+      <nav class="nav" aria-label="Main">
+        <button class="menu-toggle" aria-controls="nav-menu" aria-expanded="false" onclick="toggleMenu()">
+          <span class="menu-icon" aria-hidden="true">☰</span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a class="is-active" href="index.html">Home</a></li>
+          <li><a href="what-we-do.html">What We Do</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a class="btn btn-olive" href="select-your-farm.html">Get Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="page-hero gradient-emerald">
+      <div class="container narrow center">
+        <h1 class="h1 text-on-dark">Resources &amp; Support</h1>
+       
+      </div>
+    </section>
+
+    
+
+    <!-- TABS -->
+    <section class="section">
+      <div class="container">
+        <!-- Tabs list -->
+        <div class="resources-tabs" role="tablist" aria-label="Resource categories">
+          <button class="tab is-active" role="tab" aria-selected="true" aria-controls="tab-caregivers" id="tab-btn-caregivers">For Caregivers</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-professionals" id="tab-btn-professionals">For Professionals</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-faq" id="tab-btn-faq">FAQ</button>
+        </div>
+
+        <!-- Caregivers -->
+        <section id="tab-caregivers" class="tab-panel is-active" role="tabpanel" aria-labelledby="tab-btn-caregivers">
+          <div class="section-intro center">
+            <h2 class="h2">Resources for Caregivers</h2>
+            <p class="lead-soft">Tools, guidance, and support to help you care for children who've experienced trauma.</p>
+          </div>
+
+          <div class="card-grid thirds">
+            <article class="card hover-raise emerald-border">
+              <div class="icon-hero" aria-hidden="true">❤</div>
+              <h3 class="h3">Trauma-Informed Parenting</h3>
+              <p class="muted">Understand trauma, recognize triggers, and create healing environments.</p>
+              <ul class="mini-checklist emerald">
+                <li>Understanding childhood trauma</li>
+                <li>Creating safety &amp; stability</li>
+                <li>Managing challenging behaviors</li>
+                <li>Building trust &amp; attachment</li>
+              </ul>
+            </article>
+
+            <article class="card hover-raise olive-border">
+              <div class="icon-hero olive" aria-hidden="true">👥</div>
+              <h3 class="h3">Support Groups</h3>
+              <p class="muted">Connect with other foster parents and caregivers who understand your journey.</p>
+              <ul class="mini-checklist olive">
+                <li>Monthly caregiver meetups</li>
+                <li>Online support communities</li>
+                <li>Mentorship programs</li>
+                <li>Family social events</li>
+              </ul>
+            </article>
+
+            <article class="card hover-raise emerald-border">
+              <div class="icon-hero" aria-hidden="true">📖</div>
+              <h3 class="h3">Self-Care Resources</h3>
+              <p class="muted">Tools and practices to help you maintain your emotional and spiritual health.</p>
+              <ul class="mini-checklist emerald">
+                <li>Burnout prevention strategies</li>
+                <li>Spiritual renewal practices</li>
+                <li>Respite care options</li>
+                <li>Caregiver wellness guides</li>
+              </ul>
+            </article>
+
+            <article class="card hover-raise olive-border">
+              <div class="icon-hero olive" aria-hidden="true">📄</div>
+              <h3 class="h3">Practical Tools</h3>
+              <p class="muted">Downloadable resources, worksheets, and guides for everyday caregiving.</p>
+              <ul class="mini-checklist olive">
+                <li>Behavior tracking tools</li>
+                <li>Communication templates</li>
+                <li>Emergency contact forms</li>
+                <li>Daily routine planners</li>
+              </ul>
+            </article>
+          </div>
+
+          <p class="center" style="margin-top:24px;">
+            <a class="btn btn-olive" href="contact.html" aria-label="Contact us to access caregiver resources">
+              Request Resources
+            </a>
+          </p>
+        </section>
+
+        <!-- Professionals -->
+        <section id="tab-professionals" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-professionals" hidden>
+          <div class="section-intro center">
+            <h2 class="h2">Resources for Professionals</h2>
+            <p class="lead-soft">Training, research, and collaboration opportunities for child welfare professionals.</p>
+          </div>
+
+          <div class="card-grid halves">
+            <article class="card emerald-border">
+              <h3 class="h3">Professional Training</h3>
+              <p class="muted">Continuing education in trauma-informed care, attachment theory, and evidence-based interventions.</p>
+              <a class="btn" href="contact.html">Learn More</a>
+            </article>
+
+            <article class="card olive-border">
+              <h3 class="h3">Research &amp; Best Practices</h3>
+              <p class="muted">Access current research, case studies, and evidence-based practices in residential child care.</p>
+              <a class="btn btn-olive" href="contact.html">Access Research</a>
+            </article>
+
+            <article class="card emerald-border">
+              <h3 class="h3">Collaboration Opportunities</h3>
+              <p class="muted">Partner with us on initiatives, share best practices, and build stronger networks for better outcomes.</p>
+              <a class="btn" href="contact.html">Partner With Us</a>
+            </article>
+
+            <article class="card olive-border">
+              <h3 class="h3">Consultation Services</h3>
+              <p class="muted">Expert consultation on complex cases, program development, and trauma-informed implementation.</p>
+              <a class="btn btn-olive" href="contact.html">Request Consultation</a>
+            </article>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="tab-faq" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-faq" hidden>
+          <div class="section-intro center">
+            <h2 class="h2">Frequently Asked Questions</h2>
+            <p class="lead-soft">Quick answers about our services and programs.</p>
+          </div>
+
+          <div class="accordion">
+            <!-- Item -->
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <span class="num">1</span>
+                <span>How do I place a child in your care?</span>
+                <span class="chev" aria-hidden="true"></span>
+              </summary>
+              <div class="accordion-panel">
+                <p>Call (555) 123-4567 or email <a href="mailto:info@sundayfarm.org">info@sundayfarm.org</a>. </p>
+                <p style="margin-top:10px;"><a class="btn" href="contact.html">Start Intake Process</a></p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <span class="num olive">2</span>
+                <span>What ages do you serve?</span>
+                <span class="chev" aria-hidden="true"></span>
+              </summary>
+              <div class="accordion-panel">
+                <p>We primarily serve children up to age 14. Older children may be accommodated case-by-case. Caregiver support is available for all ages.</p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <span class="num">3</span>
+                <span>How do I become a foster parent?</span>
+                <span class="chev" aria-hidden="true"></span>
+              </summary>
+              <div class="accordion-panel">
+                <p>The process includes an application, background checks, home study, and comprehensive training. We provide ongoing support and community.</p>
+                <p style="margin-top:10px;"><a class="btn" href="get-involved.html">Learn About Fostering</a></p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <span class="num olive">4</span>
+                <span>What services do you provide?</span>
+                <span class="chev" aria-hidden="true"></span>
+              </summary>
+              <div class="accordion-panel">
+                <p>Residential care (respite, emergency, short-term, long-term), therapeutic and educational support, caregiver programs, reunification services, and community engagement.</p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <span class="num">5</span>
+                <span>Is there a cost for your services?</span>
+                <span class="chev" aria-hidden="true"></span>
+              </summary>
+              <div class="accordion-panel">
+                <p>Respite care (≤3 days) is provided at no cost. Other services vary by type/duration; we work to ensure no child is turned away due to finances.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- EXTERNAL RESOURCES -->
+    <section class="section section-soft" aria-labelledby="external-resources">
+      <div class="container narrow">
+        <h2 id="external-resources" class="h2 center">Additional Resources</h2>
+        <div class="stack-24">
+          <article class="card">
+            <h3 class="h3">National Child Traumatic Stress Network</h3>
+            <p class="muted">Comprehensive resources on childhood trauma and evidence-based treatments.</p>
+            <p><a class="btn-link" href="https://www.nctsn.org" target="_blank" rel="noopener">Visit Website →</a></p>
+          </article>
+          <article class="card">
+            <h3 class="h3">Child Welfare Information Gateway</h3>
+            <p class="muted">Information and resources for child welfare professionals and families.</p>
+            <p><a class="btn-link" href="https://www.childwelfare.gov" target="_blank" rel="noopener">Visit Website →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+   
+
+  <!-- Footer (same as index) -->
+  <footer class="site-footer" role="contentinfo">
+    <section class="cta-band">
+      <div class="container split">
+        <div>
+          <h3 class="h3">Ready to Make a Difference?</h3>
+          <p>Whether you need support or want to help, we’re here for you.</p>
+          <a class="btn btn-light" href="contact.html">Contact Us</a>
+        </div>
+        <div class="text-right">
+          <h3 class="h3">Plant a Seed of Hope &amp; Healing</h3>
+          <p>Your gift transforms lives and brings healing to children in need.</p>
+          <a class="btn btn-olive" href="get-involved.html">Donate Today</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div>
+          <h4 class="h4">The Sunday Farm</h4>
+          <p class="muted">Healed Children, Heal the World.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="what-we-do.html">What We Do</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </nav>
+        <div class="contact">
+          <p><a href="tel:+15551234567">(555) 123-4567</a><br><a href="mailto:info@sundayfarm.org">info@sundayfarm.org</a></p>
+          <address>123 Healing Way<br>Hope Valley, CA 95000</address>
+        </div>
+      </div>
+      <div class="container tiny">
+        &copy; <span id="year"></span> The Sunday Farm. 501(c)(3).  
+        <span class="partner-line">Official Partner: 
+          <a href="https://hisflock.org" target="_blank" rel="noopener">HisFlock.org</a>
+        </span>
+      </div>
+  </footer>
+
+
+  <!-- Minimal JS: nav toggle + tabs -->
+  <script>
+    // Mobile menu (uses your existing CSS)
+    function toggleMenu() {
+      const m = document.getElementById('nav-menu');
+      const btn = document.querySelector('.menu-toggle');
+      const open = m.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    // Tabs
+    (() => {
+      const list = document.querySelector('.resources-tabs');
+      if (!list) return;
+      const tabs = Array.from(list.querySelectorAll('.tab'));
+      const panels = Array.from(document.querySelectorAll('.tab-panel'));
+
+      function activate(id) {
+        tabs.forEach(t => {
+          const active = t.id === 'tab-btn-' + id;
+          t.classList.toggle('is-active', active);
+          t.setAttribute('aria-selected', active ? 'true' : 'false');
+          t.tabIndex = active ? 0 : -1;
+        });
+        panels.forEach(p => {
+          const show = p.id === 'tab-' + id;
+          p.hidden = !show;
+          p.classList.toggle('is-active', show);
+        });
+      }
+
+      tabs.forEach(t => {
+        t.addEventListener('click', () => {
+          const id = t.id.replace('tab-btn-', '');
+          activate(id);
+        });
+        t.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const dir = e.key === 'ArrowRight' ? 1 : -1;
+            const i = (tabs.indexOf(t) + dir + tabs.length) % tabs.length;
+            tabs[i].focus();
+            tabs[i].click();
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

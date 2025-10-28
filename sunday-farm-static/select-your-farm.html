@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Select Your Farm — The Sunday Farm</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER (same structure as before, just swaps text for image) -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <button class="logo" onclick="location.href='index.html'">
+        <img class="logo-img" src="images/logo2.png" alt="The Sunday Farm logo">
+      </button>
+      
+
+      <nav class="nav" aria-label="Main">
+        <button class="menu-toggle" aria-controls="nav-menu" aria-expanded="false" onclick="toggleMenu()">
+          <span class="menu-icon" aria-hidden="true">☰</span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a class="is-active" href="index.html">Home</a></li>
+          <li><a href="what-we-do.html">What We Do</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a class="btn btn-olive" href="select-your-farm.html">Get Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main id="main" class="flex-1" role="main">
+    <section class="section" aria-labelledby="syf-heading">
+      <div class="container" style="max-width: 960px;">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <h1 id="syf-heading" class="h2 mb-4">How Can We Help You Today?</h1>
+          <p class="text-xl muted center narrow" style="line-height:1.7;">
+            Select the option that best describes your situation. You can always change your
+            choice or explore both paths—we're here to serve you.
+          </p>
+        </div>
+
+        <!-- Two Choice Cards -->
+        <div class="grid halves gap-24 mb-12">
+          <!-- Option 1 -->
+          <a
+            href="what-we-do.html#residential-care"
+            class="card card-outline-emerald hover-raise"
+            aria-label="I'm here on behalf of a child who needs a home — Learn more"
+            style="text-decoration:none; display:block;"
+          >
+            <div class="card-body" style="text-align:center;">
+              <div class="icon-circle xl icon-emerald center" aria-hidden="true">
+                <!-- Heart (Lucide-style) -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="h3 emerald mb-8">I'm here on behalf of a child who needs a home</h3>
+              <p class="muted center narrow" style="line-height:1.7;">
+                Learn about our residential care programs for children who have experienced neglect or abuse.
+                We provide emergency, short-term, and long-term care in Christ-centered, family-style homes.
+              </p>
+              <p class="emerald" style="font-weight:600; margin-top:16px;">
+                Learn More &amp; Start Intake →
+              </p>
+            </div>
+          </a>
+
+          <!-- Option 2 -->
+          <a
+            href="what-we-do.html#caregiver-support"
+            class="card card-outline-olive hover-raise"
+            aria-label="I'm a parent, caregiver, or concerned adult who needs guidance and support — Learn more"
+            style="text-decoration:none; display:block;"
+          >
+            <div class="card-body" style="text-align:center;">
+              <div class="icon-circle xl icon-olive center" aria-hidden="true">
+                <!-- Users (Lucide-style) -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="h3 olive mb-8">I'm a parent, caregiver, or concerned adult who needs guidance &amp; support</h3>
+              <p class="muted center narrow" style="line-height:1.7;">
+                Access our parent and caregiver support services including respite care, emotional support,
+                Christ-centered community, practical resources, and guidance for raising children who've
+                experienced trauma.
+              </p>
+              <p class="olive" style="font-weight:600; margin-top:16px;">
+                Get Support &amp; Resources →
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Help Text -->
+        <div class="text-center">
+          <p class="muted">
+            Not sure which option is right for you?
+            <a class="link-emerald" href="what-we-do.html">Learn what we do</a> or
+            <a class="link-emerald" href="contact.html">contact us</a> for personalized guidance.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same as other pages) -->
+  <footer class="site-footer" role="contentinfo">
+    <section class="cta-band">
+      <div class="container split">
+        <div>
+          <h3 class="h3">Ready to Make a Difference?</h3>
+          <p>Whether you need support or want to help, we’re here for you.</p>
+          <a class="btn btn-light" href="contact.html">Contact Us</a>
+        </div>
+        <div class="text-right">
+          <h3 class="h3">Plant a Seed of Hope &amp; Healing</h3>
+          <p>Your gift transforms lives and brings healing to children in need.</p>
+          <a class="btn btn-olive" href="get-involved.html">Donate Today</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div>
+          <h4 class="h4">The Sunday Farm</h4>
+          <p class="muted">Healed Children, Heal the World.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="what-we-do.html">What We Do</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </nav>
+        <div class="contact">
+          <p><a href="tel:+15551234567">(555) 123-4567</a><br><a href="mailto:info@sundayfarm.org">info@sundayfarm.org</a></p>
+          <address>123 Healing Way<br>Hope Valley, CA 95000</address>
+        </div>
+      </div>
+      <div class="container tiny">
+        &copy; <span id="year"></span> The Sunday Farm. 501(c)(3).  
+        <span class="partner-line">Official Partner: 
+          <a href="https://hisflock.org" target="_blank" rel="noopener">HisFlock.org</a>
+        </span>
+      </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
