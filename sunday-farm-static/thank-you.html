@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You — The Sunday Farm</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* tiny polish */
+    .thanks-hero { padding: 88px 0 36px; background: linear-gradient(135deg,#146434,#0f4d28); color:#fff; }
+    .thanks-card { max-width: 760px; margin: 20px auto; }
+    .partner-line { margin-left: 10px; padding-left:10px; border-left:1px solid rgba(255,255,255,.18); }
+    .footer-main .partner-line a { color:#e7f3ea; text-decoration: underline; }
+    .footer-main .partner-line a:hover { text-decoration: none; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <button class="logo" onclick="location.href='index.html'" aria-label="The Sunday Farm — Home">
+        <img class="logo-img" src="images/logo2.png" alt="The Sunday Farm logo">
+      </button>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-we-do.html">What We Do</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a class="btn btn-olive" href="select-your-farm.html">Get Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="thanks-hero">
+      <div class="container text-center narrow">
+        <h1 class="h1 text-on-dark">Thank you for reaching out</h1>
+        
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="card success thanks-card center">
+          
+          <h2 class="h3" style="color:#166534; text-align:center;">Message sent!</h2>
+          <p class="muted" style="color:#166534; text-align:center;">
+            Thank you for your message,If this is urgent, please call our main office: <a class="link-emerald" href="tel:+15551234567">(555) 123-4567</a>
+          </p>
+          <p class="center" style="margin-top:10px;">
+            <a class="btn btn-olive" href="index.html">Back to Home</a>
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div>
+          <h4 class="h4">The Sunday Farm</h4>
+          <p class="muted">Healed Children, Heal the World.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="what-we-do.html">What We Do</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </nav>
+        <div class="contact">
+          <p><a href="tel:+15551234567">(555) 123-4567</a><br><a href="mailto:info@sundayfarm.org">info@sundayfarm.org</a></p>
+          <address>123 Healing Way<br>Hope Valley, CA 95000</address>
+        </div>
+      </div>
+      <div class="container tiny">
+        &copy; <span id="year"></span> The Sunday Farm. 501(c)(3).
+        <span class="partner-line">Official Partner: <a href="https://hisflock.org" target="_blank" rel="noopener">HisFlock.org</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
