@@ -63,50 +63,66 @@
             <div id="form-success" class="card success" style="display:none; margin-top:18px;">
               <div class="icon-hero success" aria-hidden="true"></div>
               <h3 class="h4" style="color:#166534;">Message Sent Successfully!</h3>
-              <p class="muted" style="color:#166534;">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+              <p class="muted" style="color:#166534;">Thank you for reaching out. We'll get back to you within 24-48 hours.</p>
             </div>
+            <form 
+            id="contact-form" 
+            class="form card" 
+            aria-label="Contact form" 
+            style="margin-top:18px;"
+            action="https://formspree.io/f/mjkpenlb"
+            method="POST"
+          >
+           <!-- Optional helpers -->
+         <input type="hidden" name="_subject" value="New message from The Sunday Farm contact form">
+         <input type="hidden" name="_template" value="table">
+        <!-- replace with your real page if you want custom thank-you -->
+          <!-- <input type="hidden" name="_redirect" value="https://yoursite.com/thank-you.html"> -->
 
-            <form id="contact-form" class="form card" aria-label="Contact form" style="margin-top:18px;">
-              <div class="field">
-                <label for="name">Full Name <span aria-hidden="true">*</span></label>
-                <input id="name" name="name" type="text" required placeholder="John Doe" />
-              </div>
+          <!-- Honeypot to cut spam -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-              <div class="field">
-                <label for="email">Email Address <span aria-hidden="true">*</span></label>
-                <input id="email" name="email" type="email" required placeholder="john@example.com" />
-              </div>
-
-              <div class="field">
-                <label for="phone">Phone Number</label>
-                <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" />
-              </div>
-
-              <div class="field">
-                <label for="role">I am a... <span aria-hidden="true">*</span></label>
-                <select id="role" name="role" required aria-label="Select your role">
-                  <option value="" selected disabled>Select your role</option>
-                  <option value="caregiver">Parent/Caregiver</option>
-                  <option value="professional">Social Worker/Professional</option>
-                  <option value="volunteer">Potential Volunteer</option>
-                  <option value="donor">Potential Donor/Partner</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="subject">Subject <span aria-hidden="true">*</span></label>
-                <input id="subject" name="subject" type="text" required placeholder="How can we help you?" />
-              </div>
-
-              <div class="field">
-                <label for="message">Message <span aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" rows="6" required placeholder="Tell us more about your inquiry..."></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-emerald-lg" aria-label="Submit contact form">Send Message</button>
-              <p class="tiny muted center" style="margin-top:10px;">* Required fields</p>
-            </form>
+            <div class="field">
+              <label for="name">Full Name <span aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" required placeholder="John Doe" />
+            </div>
+          
+            <div class="field">
+              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" required placeholder="john@example.com" />
+            </div>
+          
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" />
+            </div>
+          
+            <div class="field">
+              <label for="role">I am a... <span aria-hidden="true">*</span></label>
+              <select id="role" name="role" required aria-label="Select your role">
+                <option value="" selected disabled>Select your role</option>
+                <option value="caregiver">Parent/Caregiver</option>
+                <option value="professional">Social Worker/Professional</option>
+                <option value="volunteer">Potential Volunteer</option>
+                <option value="donor">Potential Donor/Partner</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          
+            <div class="field">
+              <label for="subject">Subject <span aria-hidden="true">*</span></label>
+              <input id="subject" name="subject" type="text" required placeholder="How can we help you?" />
+            </div>
+          
+            <div class="field">
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="6" required placeholder="Tell us more about your inquiry..."></textarea>
+            </div>
+          
+            <button type="submit" class="btn btn-emerald-lg" aria-label="Submit contact form">Send Message</button>
+            <p class="tiny muted center" style="margin-top:10px;">* Required fields</p>
+          </form>
+          
           </div>
 
           <!-- Contact info cards -->
@@ -195,7 +211,7 @@
                     <p class="muted"><strong>Monday – Friday:</strong> 8:00 AM – 6:00 PM</p>
                     <p class="muted"><strong>Saturday:</strong> 9:00 AM – 2:00 PM</p>
                     <p class="muted"><strong>Sunday:</strong> Closed</p>
-                    <p class="tiny muted italic" style="margin-top:6px;">*Crisis support available 24/7</p>
+                    
                   </div>
                 </div>
               </article>
@@ -273,7 +289,7 @@
 </footer>
 
   
-  <!-- Minimal form handler -->
+  <!-- Minimal form handler
   <script>
     (function () {
       const form = document.getElementById('contact-form');
@@ -289,7 +305,7 @@
         });
       }
     }());
-  </script>
+  </script> -->
  
 
   <script src="script.js" defer></script>

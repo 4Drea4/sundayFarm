@@ -834,3 +834,16 @@
 .footer-main .partner-line a:hover {
   text-decoration: none;
 }
+.partner-line {
+  margin-left: 10px;
+  display: inline-block;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255,255,255,.18);
+}
+.footer-main .partner-line a {
+  color: #e7f3ea;
+  text-decoration: underline;
+}
+.footer-main .partner-line a:hover {
+  text-decoration: none;
+}
