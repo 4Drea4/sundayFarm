@@ -560,13 +560,13 @@
 
 @media (min-width: 900px) {
   .logo-img {
-    height: 68px; /* a bit bigger on desktop */
+    height: 90px; /* a bit bigger on desktop */
   }
 }
 
 @media (max-width: 600px) {
   .logo-img {
-    height: 44px; /* smaller for phones so it doesn’t break layout */
+    height: 60px; /* smaller for phones so it doesn’t break layout */
   }
 }
 
@@ -846,4 +846,57 @@
 }
 .footer-main .partner-line a:hover {
   text-decoration: none;
+}
+
+/* Single source of truth for header + logo size */
+:root{
+  --header-h: 108px;                 /* taller to fit bigger logo */
+  --logo-h: clamp(56px, 9vw, 96px);  /* nice big, responsive logo */
+}
+
+/* Header uses the variable */
+.site-header { position: sticky; top: 0; z-index: 100; background:#fff; }
+.header-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  height: var(--header-h);
+  gap: 16px;
+}
+
+/* Logo uses the variable */
+.logo { display:flex; align-items:center; gap:8px; padding:0; border:0; background:none; line-height:0; }
+.logo-img { height: var(--logo-h); width:auto; display:block; object-fit:contain; }
+
+/* Mobile menu */
+@media (max-width: 900px){
+  .nav .menu-toggle{ display:inline-flex; background:none; border:1px solid var(--border); border-radius:8px; padding:8px 10px; }
+
+  .nav-list{
+    position:absolute; right:16px;
+    top: calc(var(--header-h) - 6px);   /* 👈 follow header height */
+    z-index: 120;
+    display:none; flex-direction:column; align-items:stretch;
+    background:#fff; border:1px solid var(--border); padding:8px; border-radius:12px;
+    min-width:260px; box-shadow: 0 12px 28px rgba(0,0,0,.12);
+  }
+  .nav-list.is-open{ display:flex; }
+}
+@media (max-width: 900px) {
+  .nav .menu-toggle { display: inline-flex; }
+
+  .nav-list {
+    position: absolute;
+    right: 16px;
+    top: 100%;
+    margin-top: 8px;
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    min-width: 260px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    z-index: 120;
+  }
+
+  .nav-list.is-open { display: flex; }
 }

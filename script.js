@@ -1,16 +1,39 @@
-// Mobile nav (you already have this)
-function toggleMenu() {
-  const nav = document.getElementById('nav-menu');
-  const btn = document.querySelector('.menu-toggle');
-  const open = nav.classList.toggle('open');
-  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-}
+// === MOBILE MENU TOGGLE === //
+(function() {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navList = document.getElementById('nav-menu');
+  if (!toggleBtn || !navList) return;
 
-// Footer year
+  toggleBtn.addEventListener('click', function () {
+    const isOpen = navList.classList.toggle('is-open');
+    toggleBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close menu when any nav link is clicked
+  navList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('is-open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Optional: close when clicking outside
+  document.addEventListener('click', e => {
+    if (!navList.classList.contains('is-open')) return;
+    if (!e.target.closest('.nav')) {
+      navList.classList.remove('is-open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+
+
+// === FOOTER YEAR === //
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Simple accordion (no dependencies)
+
+// === SIMPLE ACCORDION === //
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.accordion-trigger');
   if (!btn) return;

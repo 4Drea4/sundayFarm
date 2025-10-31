@@ -420,6 +420,14 @@
         </span>
       </div>
   </footer>
+  <script>
+    function toggleMenu() {
+     const navList = document.getElementById("nav-menu");
+      const toggleButton = document.querySelector(".menu-toggle");
+      const isOpen = navList.classList.toggle("is-open");
+     toggleButton.setAttribute("aria-expanded", isOpen);
+    }
+  </script>
 
 
   <script src="script.js" defer></script>
