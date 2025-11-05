@@ -900,3 +900,10 @@
 
   .nav-list.is-open { display: flex; }
 }
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* optional, for spacing if you ever add multiple buttons again */
+  margin-top: 24px;
+}
