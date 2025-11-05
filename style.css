@@ -972,3 +972,46 @@
   margin-top: 8px;
   border-radius: 2px;              /* tiny smoothing */
 }
+/* === Service checklist markers (fixed layout) === */
+#child-section .mini-checklist,
+#caregiver-section .mini-checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#child-section .mini-checklist li,
+#caregiver-section .mini-checklist li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  display: block;
+  white-space: normal;
+}
+
+/* emerald section = solid circle */
+#child-section .mini-checklist.emerald li::before,
+#caregiver-section .mini-checklist.emerald li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 7px;
+  height: 7px;
+  background: #065f46;
+  border-radius: 999px;
+}
+
+/* olive section = outlined circle */
+#child-section .mini-checklist.olive li::before,
+#caregiver-section .mini-checklist.olive li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #6b7f4f;
+  border-radius: 999px;
+}
