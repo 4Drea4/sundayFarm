@@ -59,3 +59,19 @@ document.addEventListener('click', (e) => {
     btn.setAttribute('aria-expanded', 'true');
   }
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.toggle-btn');
+  const sections = document.querySelectorAll('.toggle-section');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const target = btn.dataset.target;
+      sections.forEach(section => {
+        section.classList.toggle('active', section.id === target);
+      });
+    });
+  });
+});
