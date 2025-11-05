@@ -9,18 +9,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Small local helpers so we don’t disturb your global stylesheet */
+    .pale-olive { background: linear-gradient(135deg, rgba(123,153,42,.08), #fff); }
+    .quote-card { border-left: 4px solid var(--olive, #7b992a); padding: 16px 20px; border-radius: 8px; }
+    .team-grid { display: grid; gap: 24px; grid-template-columns: 1fr; }
+    .team-card { padding: 20px; border-radius: 12px; }
+    .team-photo { width: 120px; height: 120px; object-fit: cover; border-radius: 12px; }
+    .team-flex { display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: start; }
+    @media (min-width: 800px){
+      .team-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- HEADER (same structure as before, just swaps text for image) -->
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <button class="logo" onclick="location.href='index.html'">
         <img class="logo-img" src="images/logo2.png" alt="The Sunday Farm logo">
       </button>
-      
-
       <nav class="nav" aria-label="Main">
         <button class="menu-toggle" aria-controls="nav-menu" aria-expanded="false" onclick="toggleMenu()">
           <span class="menu-icon" aria-hidden="true">☰</span>
@@ -39,198 +50,111 @@
     </div>
   </header>
 
-
   <main id="main" role="main">
-    <!-- Gradient page hero -->
+    <!-- HERO -->
     <section class="page-hero gradient-emerald">
       <div class="container text-center narrow">
         <h1 class="h1 text-on-dark">Our Story</h1>
-       
       </div>
     </section>
 
-    <!-- Founding Vision cards -->
+    <!-- OUR STORY (replaces Sunday/Farm boxes) -->
     <section class="section">
       <div class="container narrow">
         <div class="section-intro center">
-          <h2 class="h2">Why “The Sunday Farm Children's Home”?</h2>
-          <p class="lead-soft italic">A name that speaks to our heart, mission, and hope for every child.</p>
+          <h2 class="h2">The Beginning</h2>
         </div>
 
-        <div class="grid-2 gap-24">
-          <!-- Card 1 -->
-          <article class="card card-outline-emerald soft">
-            <div class="icon-circle icon-emerald" aria-hidden="true">
-              <!-- Cross icon -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                <path stroke-width="2" stroke-linecap="round" d="M12 3v18M3 12h18"/>
-              </svg>
-            </div>
-            <h3 class="h3">Sunday</h3>
-            <p>Sunday represents the first day of the week — a fresh start, a new beginning. It’s a day of rest, worship, and encountering Jesus.</p>
-            <p class="mt-8">For every child who comes to us, Sunday symbolizes hope — the promise that no matter what has happened, today can be the beginning of something beautiful.</p>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="card card-outline-olive soft">
-            <div class="icon-circle icon-olive" aria-hidden="true">
-              <!-- Heart icon -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
-              </svg>
-            </div>
-            <h3 class="h3">Farm</h3>
-            <p>A farm is a place of growth and cultivation. It requires patience, consistent care, and deep love. Seeds are planted, roots take hold, and with time and nurturing, beautiful things flourish.</p>
-            <p class="mt-8">This is where real, transformative healing happens — not rushed, but cultivated with intention, love, and the gentle guidance of the Holy Spirit.</p>
-          </article>
-        </div>
-
-        <div class="quote-banner">
-          <p class="quote">“Here, children come in and are changed forever.”</p>
-          <p class="quote-sub">And when children heal — the world heals too.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- The Beginning text block -->
-    <section class="section section-soft">
-      <div class="container narrow">
-        <h2 class="h2">The Beginning</h2>
         <div class="prose">
-          <p>The Sunday Farm Children's Home was born from a simple yet profound conviction: that every child deserves to experience the healing love of Christ, and that when children are healed, they become agents of healing in the world.</p>
-          <p>Our founders — a group of passionate social workers, therapists, counselors, and Christ-followers — recognized an urgent need in our community: children who had experienced deep trauma needed more than just a safe place to stay. They needed a home where they could encounter God’s love, experience true healing, and discover their identity in Christ.</p>
-          <p>What started as a vision shared around a kitchen table has grown into a comprehensive ministry serving children and families throughout our region. But our heart remains the same: to create spaces where healing happens, where Christ is encountered, and where children discover that they are deeply loved and have profound purpose.</p>
+          <p>The Sunday Farm Children’s Home was born out of heartbreak and a journey of healing. Our Founder, Ales, experienced sexual molestation at just seven years old. That one incident sent her into years of confusion, broken identity, depression, addiction, and deep pain. For much of her life, she lived as a reflection of that trauma rather than the person God created her to be.</p>
+          <p>In her twenties, Ales found herself caught in repeating cycles of the same trauma until 2020, when her father became seriously ill. Desperate for a miracle, she turned to the only One known for healing—Jesus. She prayed for her father’s restoration, and within months, God answered. From that moment, she recommitted her life fully to Jesus, choosing to walk in His love and be led by the Holy Spirit.</p>
+          <p>Five years later, Ales stands healed and whole—freed from pain she once believed would define her forever caused by molestation and assault. During her healing journey, she came across an article about an eleven-year-old who assaulted an eight-year-old. That story broke her heart and ignited a holy fire within her. She vowed to join the Lord in freeing children from the grip of assault—just as He had freed her.</p>
         </div>
 
-        <article class="card card-outline-emerald mt-24">
-          <div class="card-body flex-row">
-            <div class="icon-circle icon-emerald" aria-hidden="true">
-              <!-- Target icon -->
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" stroke-width="2"></circle>
-                <circle cx="12" cy="12" r="6" stroke-width="2"></circle>
-                <circle cx="12" cy="12" r="2" stroke-width="2"></circle>
-              </svg>
-            </div>
-            <div>
-              <h3 class="h4 mb-8">Our Founding Philosophy</h3>
-              <p class="italic muted">
-                “We believe that every child — no matter what they’ve experienced — has the capacity to heal, to grow, and to thrive when surrounded by Christ-centered love and care. And we believe that healed children don’t just change their own lives — they change the world.”
-              </p>
+        <!-- Single green quote box (non-italic, one font) -->
+        <article class="card pale-olive mt-24">
+          <div class="card-body">
+            <div class="quote-card">
+              <p><strong>We are raising healthy, whole children whose love for Jesus and inner restoration bring healing to the world around them.</strong></p>
             </div>
           </div>
         </article>
-      </div>
-    </section>
 
-    <!-- Timeline -->
-    <section class="section">
-      <div class="container narrow">
-        <h2 class="h2 text-center">Our Journey of Growth</h2>
-
-        <ol class="timeline">
-          <li class="timeline-item accent-emerald">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="eyebrow emerald">Phase 1: Foundation</span>
-              <h3 class="h4">Planting the Seeds</h3>
-              <p>We opened our first home with a vision to provide Christ-centered care for children who had experienced trauma. Core programs and trauma-informed protocols were established by a dedicated team of caregivers.</p>
-            </div>
-          </li>
-
-          <li class="timeline-item accent-olive">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="eyebrow olive">Phase 2: Growth</span>
-              <h3 class="h4">Taking Root</h3>
-              <p>Services expanded to therapeutic support, educational programs, and family reunification. We added homes and forged partnerships with churches, schools, and community organizations.</p>
-            </div>
-          </li>
-
-          <li class="timeline-item accent-emerald">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="eyebrow emerald">Phase 3: Expansion</span>
-              <h3 class="h4">Bearing Fruit</h3>
-              <p>We launched parent & caregiver support, recognizing healing extends to the whole family system. Recruitment and training equipped more families to provide Christ-centered homes.</p>
-            </div>
-          </li>
-
-          <li class="timeline-item accent-olive">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="eyebrow olive">Phase 4: Today</span>
-              <h3 class="h4">Multiplying Impact</h3>
-              <p>We now serve children and families through residential care, respite services, therapy, mentorship, life-skills, and community engagement — creating spaces for children to lead, worship, and share their gifts.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Team -->
-    <section class="section section-soft">
-      <div class="container narrow">
-        <h2 class="h2 text-center">Our Team</h2>
-        <p class="lead-soft text-center">Dedicated servants united by a common calling.</p>
-
-        <div class="grid-3 gap-24 mt-24">
-          <div class="team-card">
-            <div class="icon-circle icon-emerald xl" aria-hidden="true">
-              <!-- Heart -->
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
-              </svg>
-            </div>
-            <h3 class="h4">Caregivers</h3>
-            <p class="muted">Trained in trauma-informed care and devoted to creating safe, loving homes.</p>
-          </div>
-
-          <div class="team-card">
-            <div class="icon-circle icon-olive xl" aria-hidden="true">
-              <!-- Cross -->
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                <path stroke-width="2" stroke-linecap="round" d="M12 3v18M3 12h18"/>
-              </svg>
-            </div>
-            <h3 class="h4">Ministry Team</h3>
-            <p class="muted">Therapists, social workers, and counselors committed to holistic healing.</p>
-          </div>
-
-          <div class="team-card">
-            <div class="icon-circle icon-emerald xl" aria-hidden="true">
-              <!-- Users -->
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4" stroke-width="2" />
-                <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-            </div>
-            <h3 class="h4">Supporters</h3>
-            <p class="muted">Volunteers, partners, and community members who make our work possible.</p>
-          </div>
+        <div class="prose mt-16">
+          <p>From that vow, The Sunday Farm Children’s Home was born: a Christ-centered safe haven where children come in and are changed forever. Every child who comes to us carries their own story, questions, and need for a fresh start. “Sunday” represents that new beginning; “Farm” represents the steady growth, cultivation, and care that take place in our homes—not fast or flashy, but deep and real.</p>
+          <p>Here, love is planted and healing takes root. We are raising healthy, whole children whose love for Jesus and inner restoration bring healing to the world around them. We don’t force faith, we simply invite children into our homes and into a relationship with the One who saved our founder, Ales, and so many of our team.</p>
+          <p>Our vision is to raise children who are led by the Holy Spirit and grow to be disciples of Jesus—carrying transformative love to every corner of the world. We also walk alongside parents and caregivers who are navigating the pain of discovering their child has been harmed. No parent should walk that road alone.</p>
+          <p>Raising a child in the way they should go or walking alongside a family who’s stewarding a healing child isn’t a job done by one person. It takes a community: a family. Join our family by getting involved today. A healed &amp; whole child is on the other side of your YES.</p>
         </div>
 
-        <article class="card mt-24">
-          <div class="card-body text-center">
-            <p>Every member of our team — from residential staff to board members, from volunteers to donors — is united by a shared calling: to see children healed by the love of Christ and empowered to heal the world.</p>
-            <p class="italic muted mt-12">We’re not just staff and volunteers — we’re a family on mission together.</p>
-          </div>
-        </article>
+        <div class="center mt-24">
+          <a class="btn btn-emerald-lg" href="get-involved.html" aria-label="Start Intake Process">
+            Get Involved
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- Looking Forward -->
-    <section class="section gradient-soft">
-      <div class="container narrow text-center">
-        <h2 class="h2">Looking Forward</h2>
-        <p class="lead-soft max-640 center">As we continue to grow, our commitment to Christ-centered healing remains unwavering. We’re excited about the future — not because of our own strength, but because we serve a God who specializes in redemption, restoration, and new beginnings.</p>
-        <p class="muted italic mt-12">We’re grateful to participate in God’s work of healing children and transforming the world, one life at a time.</p>
+   <!-- STAFF -->
+   <section class="section section-soft" aria-labelledby="board-title">
+    <div class="container narrow board-wrap">
+      <div class="section-intro center">
+        <h2 id="board-title" class="h2">Staff</h2>
+        <p class="lead-soft">Our board brings together diverse expertise and vision to guide our mission and strategy.</p>
       </div>
-    </section>
+  
+      <!-- Founder feature -->
+      <article class="board-founder">
+        <div class="board-founder__media">
+          <img src="images/aleslee.png" alt="Ales Lee — Founder & Executive Director">
+        </div>
+        <div class="board-founder__body">
+          <span class="board-badge">Founder</span>
+          <h3 class="board-name">Ales Lee</h3>
+          <p class="board-role">Founder &amp; Executive Director</p>
+        
+          <p class="board-bio">
+            Ales is the founder of TSF and a full-time children’s ministry pastor in Oklahoma. She is a passionate
+            leader committed to the healing, growth, safety, and discipleship of children. She has spent time working
+            with children in classroom and daycare settings, taking her passion to reach and teach children in
+            California, D.C., Tulsa, and internationally in Tanzania. Her life’s mission is to continue partnering
+            with God to create spaces where children come in and are changed forever through a personal encounter and
+            relationship with Christ.
+          </p>
+        </div>
+      </article>
+  
+      <!-- Board grid -->
+      <div class="board-grid">
+        <article class="board-card">
+          <h4 class="board-card__name">Krystal Hall</h4>
+          <p class="board-card__title">Board Member</p>
+          <p class="board-card__desc">Childcare Professional; Founder of Home Away From Home Daycare</p>
+        </article>
+  
+        <article class="board-card">
+          <h4 class="board-card__name">Kara Bishop</h4>
+          <p class="board-card__title">Board Member</p>
+          <p class="board-card__desc">Realtor, Ellis Real Estate</p>
+        </article>
+  
+        <article class="board-card">
+          <h4 class="board-card__name">Heather Hamblin</h4>
+          <p class="board-card__title">Board Member</p>
+          <p class="board-card__desc">Experienced Teacher</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  
+  </div>
   </main>
 
-  <!-- Footer (same as index) -->
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <section class="cta-band">
       <div class="container split">
@@ -267,13 +191,23 @@
         </div>
       </div>
       <div class="container tiny">
-        &copy; <span id="year"></span> The Sunday Farm. 501(c)(3).  
-        <span class="partner-line">Official Partner: 
+        &copy; <span id="year"></span> The Sunday Farm. 501(c)(3).
+        <span class="partner-line">Official Partner:
           <a href="https://hisflock.org" target="_blank" rel="noopener">HisFlock.org</a>
         </span>
       </div>
+    </div>
   </footer>
-  
+
+  <script>
+    // Mobile menu toggle (matches your existing pattern)
+    function toggleMenu() {
+      const m = document.getElementById('nav-menu');
+      const btn = document.querySelector('.menu-toggle');
+      const open = m.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+  </script>
   <script src="script.js" defer></script>
 </body>
 </html>
