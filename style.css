@@ -1210,3 +1210,8 @@
     grid-template-columns: 1fr;
   }
 }
+header .btn.btn-olive:hover {
+  background-color: #047857 !important; /* slightly brighter shade for hover */
+  color: #fff !important;
+  border-color: #047857 !important;
+}
