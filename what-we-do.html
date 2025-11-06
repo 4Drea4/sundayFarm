@@ -286,6 +286,8 @@
     <!-- ============ END CHILD VERSION ============ -->
 
     <!-- ============ CAREGIVER VERSION ============ -->
+     
+    <a id="caregiver"></a>
     <section id="caregiver-section" class="role-section" role="tabpanel" aria-labelledby="tab-caregiver">
       <!-- Mission & Vision -->
       <section class="section">
@@ -386,6 +388,7 @@
   </main>
 
   <!-- FOOTER -->
+  
   <footer class="site-footer" role="contentinfo">
     <section class="cta-band">
       <div class="container split">
@@ -397,7 +400,9 @@
         <div class="text-right">
           <h3 class="h3">Plant a Seed of Hope &amp; Healing</h3>
           <p>Your gift transforms lives and brings healing to children in need.</p>
-          <a class="btn btn-olive" href="get-involved.html">Donate Today</a>
+          <a class="btn btn-olive" href="https://www.zeffy.com/en-US/donation-form/heal-the-world-one-child-at-a-time" target="_blank" rel="noopener">
+            Donate Today
+          </a>
         </div>
       </div>
     </section>
@@ -405,9 +410,10 @@
     <div class="footer-main">
       <div class="container footer-grid">
         <div>
-          <h4 class="h4">The Sunday Farm</h4>
+          <h4 class="h4">The Sunday Farm <br>Children’s Home</h4>
           <p class="muted">Healed Children, Heal the World.</p>
         </div>
+
         <nav aria-label="Footer">
           <ul class="footer-links">
             <li><a href="what-we-do.html">What We Do</a></li>
@@ -416,15 +422,19 @@
             <li><a href="resources.html">Resources</a></li>
           </ul>
         </nav>
+
         <div class="contact">
-          <p><a href="tel:+15551234567">(555) 123-4567</a><br>
-          <a href="mailto:info@sundayfarm.org">info@sundayfarm.org</a></p>
-          <address>123 Healing Way<br>Hope Valley, CA 95000</address>
+          <p>
+            <a href="mailto:info@sundayfarm.org">info@sundayfarm.org</a>
+          </p>
+          <address>Greater Tulsa Area</address>
+          <p class="tiny muted" style="margin-top:4px;">If it’s an emergency placement, please contact us via the contact form or email and our team will respond as quickly as possible.</p>
         </div>
       </div>
+     
       <div class="container tiny">
-        &copy; <span id="year"></span> The Sunday Farm. 501(c)(3).
-        <span class="partner-line">Official Partner:
+        &copy; <span id="year"></span> The Sunday Farm Children’s Home. 501(c)(3).  
+        <span class="partner-line">Official Partner: 
           <a href="https://hisflock.org" target="_blank" rel="noopener">HisFlock.org</a>
         </span>
       </div>
@@ -433,24 +443,70 @@
 
   <!-- ROLE TOGGLE SCRIPT -->
   <script>
-    (function(){
-      const tabs = document.querySelectorAll('.role-toggle .toggle-btn');
-      const sections = {
-        child: document.getElementById('child-section'),
-        caregiver: document.getElementById('caregiver-section')
-      };
+  
+  (function () {
+    const tabs = Array.from(document.querySelectorAll('.role-toggle .toggle-btn'));
+    const sections = {
+      child: document.getElementById('child-section'),
+      caregiver: document.getElementById('caregiver-section')
+    };
+
+    function setActive(target) {
+      // Guard
+      if (!sections[target]) return;
+
+      // Buttons
       tabs.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const target = btn.getAttribute('data-target');
-          tabs.forEach(b => {
-            b.classList.toggle('active', b === btn);
-            b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
-          });
-          sections.child.classList.toggle('active', target === 'child');
-          sections.caregiver.classList.toggle('active', target === 'caregiver');
-        });
+        const isActive = btn.getAttribute('data-target') === target;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
-    })();
+
+      // Panels
+      Object.entries(sections).forEach(([key, el]) => {
+        el.classList.toggle('active', key === target);
+        // IMPORTANT: remove any inline display that might have been set before
+        el.style.display = '';
+      });
+    }
+
+    // Click to switch
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        setActive(target);
+        // Optional: keep the hash in sync for deep-linking
+        if (history.replaceState) {
+          history.replaceState(null, '', '#' + target);
+        } else {
+          location.hash = target;
+        }
+      });
+    });
+
+    // Decide initial tab (hash-aware)
+    const initial =
+      (location.hash && location.hash.toLowerCase().includes('caregiver'))
+        ? 'caregiver'
+        : 'child';
+
+    setActive(initial);
+
+    // If the hash changes (e.g., user navigates to #child/#caregiver), respond
+    window.addEventListener('hashchange', () => {
+      const h = location.hash.toLowerCase();
+      if (h.includes('caregiver')) setActive('caregiver');
+      else if (h.includes('child')) setActive('child');
+    });
+  })();
+
+
+
+
+
+
+
+
   </script>
 
   <script src="script.js" defer></script>
